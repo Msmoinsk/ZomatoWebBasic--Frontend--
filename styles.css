@@ -36,6 +36,9 @@
     border: solid 1px white;
     display: none;
 }
+h1{
+    color: white;
+}
 
 
 @media only screen and (max-width: 600px){
