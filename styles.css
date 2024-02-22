@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: "Poppins";
 }
+/* Section I : Header */
 /* Sector 1 - Navigation */
 .hero__section{
     background: url(./images/heroSectionBackground.png);
@@ -87,10 +88,53 @@
 }
 
 
+/* Section II : Cards */
+/* Sector 1 */
+.container{
+    margin: 3rem auto;
+    width: 90%;
+}
+.we__offer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.we__offer_card{
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    transition: all .3s ease-in-out;
+}
+.we__offer_card:hover{
+    background-color: aqua;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px ;
+    /* The below Translate is to make it appear as card pushed up */
+    /* transform: translate3d(0px, -9px, 0px); */
+    transform: scale(1.1);
+}
+.we__offer_card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+.we__offer_content{
+    padding: 10px;
+}
+.we__offer_content h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+.we__offer_content p{
+    font-size: 12.5px;
+}
+
 
 /* To make the responsive for the mobile section */
 @media only screen and (max-width: 650px){
     
+    /* Section I */
     /* Sector 1 - responsive */
     .navbar__menu_container .user__icon{
         display: flex;
@@ -125,6 +169,7 @@
 }
 
 @media only screen and (max-height:500px) {
+    /* Section I */
     .hero__section{
         height: 75vh;
     }
