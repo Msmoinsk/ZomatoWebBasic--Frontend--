@@ -4,27 +4,30 @@
     box-sizing: border-box;
     font-family: "Poppins";
 }
+/* Sector 1 - Navigation */
 .hero__section{
     background: url(./images/heroSectionBackground.png);
     background-size: cover;
     background-position: center;
-    height: 60vh;
+    height: 65vh;
 }
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    height: 65px;
     padding: 16px 48px;
 }
 .navbar a{
     color: white;
     text-decoration: none;
 }
+/* The menu of the navbar */
 .navbar__menu_container{
     display: flex;
     gap: 18px;
 }
+/* In the menu the icon [made responsive so it show only on the mobile] */
 .navbar__menu_container .user__icon{
     height: 25px;
     width: 25px;
@@ -36,12 +39,59 @@
     border: solid 1px white;
     display: none;
 }
-h1{
+
+/* Sector 2 */
+/* The input section and the zomato img  */
+.hero__section_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    height: calc(65vh - 65px);
+    
+}
+/* The elements of the [ hero__section_container ] >> logo , H1 , div*/
+.hero__section_logo{
+    width: 200px;
+    height: auto;
+}
+.hero__section_title{
     color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 380;
+}
+.hero__section_input_container{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+/* The input section in the {div [hero__section_input_container]} */
+.input_container_location, 
+.input_container_search{
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+.input_container_location{
+    width: 35%;
+    border-right: 2px solid #e0e0e0;
+}
+.input_container_search{
+    width: 55%;
 }
 
 
-@media only screen and (max-width: 600px){
+
+/* To make the responsive for the mobile section */
+@media only screen and (max-width: 650px){
+    
+    /* Sector 1 - responsive */
     .navbar__menu_container .user__icon{
         display: flex;
     }
@@ -50,5 +100,32 @@ h1{
     }
     .hero__section{
         min-height: 80vh;
+    }
+
+    /* Sector 2 - responsive */
+    .hero__section_container{
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+        height: calc(80vh - 80px);
+    }
+    .hero__section_title{
+        font-size: 20px;
+        width: 95%;
+    }
+    .hero__section_input_container{
+        margin: 0 16px;
+    }
+    .input_container_location, 
+    .input_container_search{
+        padding: 10px;
+        border-radius: 10px;
+        width: 95%;
+    }
+}
+
+@media only screen and (max-height:500px) {
+    .hero__section{
+        height: 75vh;
     }
 }
