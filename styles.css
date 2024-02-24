@@ -306,7 +306,7 @@
 
 
 /* To make the responsive for the mobile section */
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 680px){
     
     /* Section I */
     /* Sector 1 - responsive */
@@ -347,4 +347,84 @@
     .hero__section{
         height: 75vh;
     }
+}
+
+/* Section IV */
+/* this is for the App Download */
+@media only screen and (min-width: 1600px) and (max-width:2000px) {
+    .get__the_app .semi_container {
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 1370px) and (max-width:1600px) {
+    .get__the_app .semi_container {
+        width: 60%;
+    }
+}
+/* My Laptop width */
+@media only screen and (min-width: 1280px) and (max-width:1370px) {
+    .get__the_app .semi_container {
+        width: 65%;
+    }
+}
+@media only screen and (min-width: 1190px) and (max-width:1280px) {
+    .get__the_app .semi_container {
+        width: 71%;
+    }
+}
+@media only screen and (min-width: 1075px) and (max-width: 1189px) {
+    .get__the_app .semi_container {
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 980px) and (max-width: 1075px) {
+    .get__the_app .semi_container {
+        width: 90%;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 980px) {
+    .get__the_app{
+        padding: 3rem 4rem;
+    }
+    .get__the_app .semi_container {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 680px) and (max-width: 800px) {
+    .get__the_app .semi_container {
+        width: 98%;
+    }
+    .get__the_app .semi_container .left,
+    .get__the_app .semi_container .right{
+        flex: 1;
+    }
+    .get__the_app{
+        padding: 1rem 2rem;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+    .get__the_app{
+        padding: 4rem 1rem;
+    }
+    .get__the_app .semi_container {
+        width: 80%;
+    }
+    .right h1 {
+        font-size: 1.2rem; /* Adjusted font size */
+    }
+    .right p {
+        font-size: 0.5rem; /* Adjusted font size */
+        margin-bottom: 0.5rem; /* Added margin for better spacing */
+    }
+    .right .radio_button_container {
+        gap: 0.2rem; /* Adjusted gap between radio buttons */
+    }
+    .input__container input,
+    .input__container button {
+        padding: 8px 10px; /* Adjusted button padding */
+    }
+    .right .download__app_container div img {
+        width: 50%; /* Adjusted image width */
+    }
+
 }
