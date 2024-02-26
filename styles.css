@@ -1,0 +1,574 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+/* Section I : Header */
+/* Sector 1 - Navigation */
+.hero__section{
+    background: url(./images/heroSectionBackground.png);
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    padding: 16px 48px;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+/* The menu of the navbar */
+.navbar__menu_container{
+    display: flex;
+    gap: 18px;
+}
+/* In the menu the icon [made responsive so it show only on the mobile] */
+.navbar__menu_container .user__icon{
+    height: 25px;
+    width: 25px;
+    /* i write the display none in order to hide on PC and Show on mobile */
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: solid 1px white;
+    display: none;
+}
+
+/* Sector 2 */
+/* The input section and the zomato img  */
+.hero__section_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    height: calc(65vh - 65px);
+    
+}
+/* The elements of the [ hero__section_container ] >> logo , H1 , div*/
+.hero__section_logo{
+    width: 200px;
+    height: auto;
+}
+.hero__section_title{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 380;
+}
+.hero__section_input_container{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+/* The input section in the {div [hero__section_input_container]} */
+.input_container_location, 
+.input_container_search{
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+.input_container_location{
+    width: 35%;
+    border-right: 2px solid #e0e0e0;
+}
+.input_container_search{
+    width: 55%;
+}
+
+
+/* Section II : Cards */
+/* Sector 1 */
+.container{
+    margin: 3rem auto;
+    width: 90%;
+}
+.we__offer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.we__offer_card{
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    transition: all .3s ease-in-out;
+}
+.we__offer_card:hover{
+    background-color: aqua;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px ;
+    /* The below Translate is to make it appear as card pushed up */
+    /* transform: translate3d(0px, -9px, 0px); */
+    transform: scale(1.1);
+}
+.we__offer_card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+.we__offer_content{
+    padding: 10px;
+}
+.we__offer_content h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+.we__offer_content p{
+    font-size: 12.5px;
+}
+
+
+/* Section III */
+.collections h1{
+    font-weight:600;
+}
+.collections .sub__heading_container{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.sub__heading_container span:nth-child(2){
+    color: #ff7e8b;
+    font-size: 13px;
+    cursor: pointer;
+}
+.collections__card_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap: 1.5rem;
+    margin-top: 1.8rem;
+}
+.collections__card_container .card{
+    height: 300px;
+    min-width: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position:relative;
+}
+.card1{
+    background-image: url('./images/collection1.jpg');
+}
+.card2{
+    background-image: url('./images/collection2.jpg');
+}
+.card3{
+    background-image: url('./images/collection3.jpg');
+}
+.card4{
+    background-image: url('./images/collection4.jpg');
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+        0deg,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.3) 50%,
+        rgba(0,0,0,0) 100%
+    );
+    z-index: 1;
+}
+.collections__card_container .card .content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    z-index: 2;
+}
+.content h4{
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Section IV */
+.get__the_app{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    background-color: rgb(255,251,247);
+    width: 100%;
+    padding: 3rem 6rem;
+}
+.get__the_app .semi_container{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.get__the_app .semi_container .left{
+    flex: 2;
+}
+.get__the_app .semi_container .left img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.get__the_app .semi_container .right{
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.right h1{
+    font-weight: 400;
+    font-size: 2rem;
+}
+.right p{
+    font-size: 0.8rem;
+}
+.right .radio_button_container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.right .radio_button_container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.right .radio_button_container div input{
+    height: 15px;
+    width: 15px;
+    accent-color: rgb(239, 79, 95);
+}
+.right .input__container{
+    display: flex;
+    gap: 0.5rem;
+}
+.input__container{
+    flex-wrap: wrap;
+}
+
+.input__container button,
+.input__container input{
+    padding: 10px 12px;
+}
+.input__container input{
+    flex: auto;
+    border: 1.5px solid grey;
+    outline: none;
+    border-radius: 5px;
+}
+.input__container button{
+    border: none;
+    background-color: rgb(239, 79, 95);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.right .download__app_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.right .download__app_container h5{
+    font-weight: 400;
+    color: gray;
+}
+.right .download__app_container div{
+    display: flex;
+    gap: 1rem;
+}
+.right .download__app_container div img{
+    width: 35%;
+}
+
+
+/* To make the responsive for the mobile section */
+@media only screen and (max-width: 680px){
+    
+    /* Section I */
+    /* Sector 1 - responsive */
+    .navbar__menu_container .user__icon{
+        display: flex;
+    }
+    .link{
+        display: none;
+    }
+    .hero__section{
+        min-height: 80vh;
+    }
+
+    /* Sector 2 - responsive */
+    .hero__section_container{
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+        height: calc(80vh - 80px);
+    }
+    .hero__section_title{
+        font-size: 20px;
+        width: 95%;
+    }
+    .hero__section_input_container{
+        margin: 0 16px;
+    }
+    .input_container_location, 
+    .input_container_search{
+        padding: 10px;
+        border-radius: 10px;
+        width: 95%;
+    }
+}
+
+@media only screen and (max-height:500px) {
+    /* Section I */
+    .hero__section{
+        height: 75vh;
+    }
+}
+
+/* Section IV */
+/* this is for the App Download */
+@media only screen and (min-width: 1600px) and (max-width:2000px) {
+    .get__the_app .semi_container {
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 1370px) and (max-width:1600px) {
+    .get__the_app .semi_container {
+        width: 60%;
+    }
+}
+/* My Laptop width */
+@media only screen and (min-width: 1280px) and (max-width:1370px) {
+    .get__the_app .semi_container {
+        width: 65%;
+    }
+}
+@media only screen and (min-width: 1190px) and (max-width:1280px) {
+    .get__the_app .semi_container {
+        width: 71%;
+    }
+}
+@media only screen and (min-width: 1075px) and (max-width: 1189px) {
+    .get__the_app .semi_container {
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 980px) and (max-width: 1075px) {
+    .get__the_app .semi_container {
+        width: 90%;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 980px) {
+    .get__the_app{
+        padding: 3rem 4rem;
+    }
+    .get__the_app .semi_container {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 670px) and (max-width: 800px) {
+    .get__the_app .semi_container {
+        width: 98%;
+    }
+    .get__the_app .semi_container .left,
+    .get__the_app .semi_container .right{
+        flex: 1;
+    }
+    .get__the_app{
+        padding: 1rem 2rem;
+    }
+}
+@media only screen and (min-width: 550px) and (max-width: 670px) {
+    .get__the_app .semi_container {
+        width: 75%;
+        flex-direction: column;
+    }
+    .get__the_app{
+        padding: 3rem 4rem;
+    }
+}
+@media only screen and (min-width: 430px) and (max-width: 550px) {
+    .get__the_app .semi_container {
+        width: 75%;
+        flex-direction: column;
+    }
+    .get__the_app{
+        padding: 3rem 2rem;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 430px) {
+    .get__the_app{
+        padding: 4rem 1rem;
+    }
+    .get__the_app .semi_container {
+        width: 70%;
+    }
+    .right h1 {
+        font-size: 1.2rem; /* Adjusted font size */
+    }
+    .right p {
+        font-size: 0.5rem; /* Adjusted font size */
+        margin-bottom: 0.5rem; /* Added margin for better spacing */
+    }
+    .right .radio_button_container {
+        gap: 0.2rem; /* Adjusted gap between radio buttons */
+    }
+    .input__container input,
+    .input__container button {
+        padding: 8px 10px; /* Adjusted button padding */
+    }
+    .right .download__app_container div img {
+        width: 50%; /* Adjusted image width */
+    }
+
+}
+
+
+
+/* Footer */
+.footer{
+    width: 100%;
+}
+
+.footer_section1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.footer_section1 img{
+    width: 130px;
+}
+
+.section1__button_container{
+    display: flex;
+    gap: 1rem;
+}
+
+.section1__button_container button{
+    padding: 5px;
+    width: 90px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.navigation_container{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(5, 1fr);
+    width: 80%;
+    margin: auto;
+    gap: 1rem;
+    padding: 3rem 0;
+}
+
+.link_container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.link_container h4{
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 0.8px;
+}
+
+.footer__link{
+    text-decoration: none;
+    color: gray;
+    font-size: 12.5px;
+    font-weight: 300;
+}
+
+.footer__link:hover{
+    color: black;
+}
+
+.Section_links_container button{
+  background-color: black;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+}
+.Section_links_container button i{
+    /* color: white; */
+    font-size: 13px;
+    display: flex;
+    /* horizontal / x-axis */
+    align-items: center; 
+    /* Vertical / y-axis */
+    justify-content: center;
+}
+
+.footer__section_logo{
+    width: 100%;
+}
+
+.disclamer{
+    width: 85%;
+    color: gray;
+    margin: auto;
+    border-top: 1px solid gray;
+    padding-top: 1.5rem;
+    font-size: small;
+}
+
+@media only screen and (max-width: 900px){
+    .navigation_container{
+            grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .navigation_container{
+            grid-template-columns: repeat(2, 1fr);
+    }
+    .footer_section1{
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .navigation_container{
+            grid-template-columns: repeat(1, 1fr);
+    }
+    .footer_section1{
+        gap: 1rem;
+    }
+}
